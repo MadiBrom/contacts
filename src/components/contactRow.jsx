@@ -1,3 +1,5 @@
+import React from "react";
+
 const ContactRow = ({ name, email, phone }) => {
   return (
     <tr>

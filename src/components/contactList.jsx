@@ -1,4 +1,7 @@
-const ContactList = () => {
+import React from "react";
+import ContactRow from "./contactRow";
+
+const ContactList = ({ contacts }) => {
   return (
     <div>
       <h1>Contact List</h1>
@@ -8,12 +11,21 @@ const ContactList = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            {/* columns as needed */}
           </tr>
         </thead>
-        <tbody>{/* rows with contact here */}</tbody>
+        <tbody>
+          {contacts.map((contact) => (
+            <ContactRow
+              key={contact.id}
+              name={contact.name}
+              email={contact.email}
+              phone={contact.phone}
+            />
+          ))}
+        </tbody>
       </table>
     </div>
   );
 };
+
 export default ContactList;

@@ -1,8 +1,6 @@
-import React from "react";
-import ContactList from "./components/contactList.jsx";
+import React, { useState } from "react";
 import "./App.css";
-import { useState } from "react";
-import ContactRow from "./components/contactRow.jsx";
+import ContactList from "./components/contactList.jsx";
 
 const dummyContacts = [
   { id: 1, name: "R2-D2", phone: "222-222-2222", email: "r2d2@droids.com" },
@@ -12,30 +10,10 @@ const dummyContacts = [
 
 const App = () => {
   const [contacts, setContacts] = useState(dummyContacts);
-  console.log("Contacts: ", contacts);
   return (
     <>
-      <h1>Contact List</h1>
-      <table>
-        <caption>do not stalk</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-          </tr>
-        </thead>
-        <tbody>
-          {contacts.map((contact) => (
-            <ContactRow
-              key={contact.id}
-              name={contact.name}
-              email={contact.email}
-              phone={contact.phone}
-            />
-          ))}
-        </tbody>
-      </table>
+      <ContactList contacts={contacts} />
     </>
   );
 };
+export default App;
