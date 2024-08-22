@@ -36,16 +36,16 @@ function ContactList({ setSelectedContactId }) {
 
   return (
     <div>
-      <h1>Contact List</h1>
-      <table>
+      <h1 class="title">Contact List</h1>
+      <table class="table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
+            <th class="header">Name</th>
+            <th class="header">Email</th>
+            <th class="header">Phone</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="cells">
           {contacts.map((contact) => (
             <ContactRow
               key={contact.id}

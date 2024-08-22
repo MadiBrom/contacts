@@ -26,24 +26,30 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
   }, [selectedContactId]);
 
   return (
-    <div>
+    <div class="ticket">
       {" "}
       {contact && (
-        <div>
+        <div class="background">
+          <h1 class="name">{contact.name}</h1>
+          <h2 class="name" id="small">
+            (a.k.a {contact.username})
+          </h2>
+          <div class="contact">
+            <h3 id="contactTitle">Contact:</h3>
+            <p>{contact.email}</p>
+            <p>{contact.phone}</p>
+            <p>{contact.website}</p>
+          </div>
+          <div class="company">
+            <p id="companyName">{contact.company.name}</p>
+            <p>
+              {contact.address.street}, {contact.address.suite},{" "}
+              {contact.address.city}, {contact.address.zipcode}
+            </p>
+          </div>
           <button onClick={() => setSelectedContactId(null)}>
             Back to Contact List
           </button>
-          <h1>Name: {contact.name}</h1>
-          <p>Email: {contact.email}</p>
-          <p>Phone: {contact.phone}</p>
-          <p>Username: {contact.username}</p>
-          <p>Website: {contact.website}</p>
-          <p>Comany: {contact.company.name}</p>
-          <p>
-            Address:
-            {contact.address.street}, {contact.address.suite},{" "}
-            {contact.address.city}, {contact.address.zipcode}
-          </p>
         </div>
       )}
     </div>

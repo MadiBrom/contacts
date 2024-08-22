@@ -40,3 +40,105 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ADD ONS */
+body {
+  background-image: url(https://cdn.gencraft.com/prod/user/9724932a-336f-4743-871c-127045b3b24e/d22055eb-19c7-4d2e-b554-8c86a4488d4c/image/image1_0.jpg?Expires=1724388575&Signature=YyFyYIAJmJhpChR28gMW3V1kWpNLx0u0CvRrd56ZJggHVbD3WdAkfGohGjhwNvwHPu4ZQsB9mNWuxHztxUvgAiUXwiuxk7Lr7d8vAh19KmP-EQHtneGVYCDw2h694bizfYqzYIBgnmrtdIUry0rAVXFm1fEnKPMWBmwEMLvGfr5KMsk7lN~mxHmgtde9WSMOPKQqBY4e7PvDnIUWAdtfWoT8AsRJ4R7pHBWBHyP3BXUIjo5WZ36Zt9wJpCca9png9mN6L0C2j8sso4~VMYdYdjYD8S8ZM3XNe1yxWShKNVi0hMbrhhpqcgknb2JmSPCby8wSY-FQvfINYb97QegYYQ__&Key-Pair-Id=K3RDDB1TZ8BHT8);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title {
+  font-family: "Times New Roman";
+  color: rgb(138, 255, 226);
+  font-weight: 400;
+  text-shadow: 1px 1px 20px rgb(0, 195, 255);
+  background-color: rgba(71, 57, 57, 0.623);
+  border: 4px solid rgb(0, 195, 255);
+  box-shadow: 1px 1px 40px rgb(17, 0, 255);
+  border-radius: 30px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  margin-bottom: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 7px;
+  z-index: 10;
+  position: relative;
+}
+.table {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.822);
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 5;
+  position: relative;
+}
+.header {
+  font-family: "Times New Roman";
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 20px rgb(107, 209, 129);
+  font-size: 55px;
+  padding: 20px;
+}
+.cells td {
+  font-family: "Times New Roman";
+  color: rgb(241, 218, 255);
+  text-shadow: 0px 0px 10px rgb(4, 0, 255);
+  background-color: rgba(210, 96, 255, 0.329);
+  font-size: 25px;
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border: 5px solid rgba(23, 0, 44, 0.438);
+  border-top-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.background {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.705);
+  border: 2px solid rgb(190, 245, 255);
+  box-shadow: 1px 1px 30px rgb(0, 102, 255);
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+.name {
+  font-weight: 100;
+  margin: 0px;
+  font-size: 100px;
+  font-family: "Times New Roman";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#small {
+  font-size: 40px;
+}
+.contact {
+  font-family: "Times New Roman";
+  font-size: 30px;
+}
+#contactTitle {
+  text-decoration: overline;
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.company {
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+#companyName {
+  font-size: 50px;
+  text-decoration: overline;
+}
+button {
+  margin-top: 40px;
+}
