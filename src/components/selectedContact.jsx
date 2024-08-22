@@ -27,21 +27,25 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
 
   return (
     <div>
-      <button onClick={() => setSelectedContactId(null)}>
-        Back to Contact List
-      </button>
-      <h1>Name: {contact.name}</h1>
-      <p>Email: {contact.email}</p>
-      <p>Phone: {contact.phone}</p>
-      <p>Username: {contact.username}</p>
-      <p>Website: {contact.website}</p>
-      <p>Comany: {contact.company.name}</p>
-      <p>
-        {" "}
-        Address:
-        {contact.address.street}, {contact.address.suite},{" "}
-        {contact.address.city}, {contact.address.zipcode}
-      </p>
+      {" "}
+      {contact && (
+        <div>
+          <button onClick={() => setSelectedContactId(null)}>
+            Back to Contact List
+          </button>
+          <h1>Name: {contact.name}</h1>
+          <p>Email: {contact.email}</p>
+          <p>Phone: {contact.phone}</p>
+          <p>Username: {contact.username}</p>
+          <p>Website: {contact.website}</p>
+          <p>Comany: {contact.company.name}</p>
+          <p>
+            Address:
+            {contact.address.street}, {contact.address.suite},{" "}
+            {contact.address.city}, {contact.address.zipcode}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
