@@ -5,6 +5,8 @@ function ContactList({ setSelectedContactId }) {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
+    console.log(setSelectedContactId);
+
     const fetchContacts = async () => {
       try {
         const response = await fetch(
@@ -26,6 +28,12 @@ function ContactList({ setSelectedContactId }) {
     fetchContacts();
   }, []);
 
+  const handleRowClick = (id) => {
+    console.log(id);
+
+    setSelectedContactId(id);
+  };
+
   return (
     <div>
       <h1>Contact List</h1>
@@ -44,7 +52,7 @@ function ContactList({ setSelectedContactId }) {
               name={contact.name}
               email={contact.email}
               phone={contact.phone}
-              onClick={() => setSelectedContactId(contact.id)} // Pass ID to parent
+              onClick={() => handleRowClick(contact.id)}
             />
           ))}
         </tbody>

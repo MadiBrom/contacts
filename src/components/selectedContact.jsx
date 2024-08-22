@@ -4,23 +4,24 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
   const [contact, setContact] = useState(null);
 
   useEffect(() => {
-    async function fetchContact() {
+    const fetchContact = async () => {
       try {
         const response = await fetch(
-          `https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users/${selectedContactId}`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+          `https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users/${selectedContactId}`
         );
-        const json = await response.json();
-        setContact(json);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setContact(data);
       } catch (error) {
-        console.error(error);
+        console.error("Error fetching contact:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
-    }
+    };
+
     fetchContact();
   }, [selectedContactId]);
 
@@ -31,7 +32,6 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
           <h1>{contact.name}</h1>
           <p>{contact.email}</p>
           <p>{contact.phone}</p>
-          <button onClick={() => setSelectedContactId(null)}>Home</button>
         </>
       ) : (
         <SelectedContact

@@ -9,12 +9,12 @@ function App() {
   return (
     <>
       {selectedContactId ? (
-        <div>Selected Contact View</div>
-      ) : (
         <SelectedContact
-          selectedContact={selectedContactId}
+          selectedContactId={selectedContactId}
           setSelectedContactId={setSelectedContactId}
         />
+      ) : (
+        <ContactList setSelectedContactId={setSelectedContactId} />
       )}
     </>
   );
