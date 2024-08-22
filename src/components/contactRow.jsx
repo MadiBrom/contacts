@@ -1,12 +1,13 @@
 import React from "react";
 
-const ContactRow = ({ name, email, phone }) => {
+function ContactRow({ name, email, phone, onClick }) {
   return (
-    <tr>
+    <tr onClick={onClick}>
       <td>{name}</td>
       <td>{email}</td>
       <td>{phone}</td>
     </tr>
   );
-};
+}
+
 export default ContactRow;
